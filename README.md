@@ -186,3 +186,7 @@ conda deactivate
 conda remove --name env --all
 rm -r micar-vl-moe
 ```
+
+---
+
+> ⚠️ **Note:** Experimental results can be sensitive to random seed initialization. For rigorous evaluation, it is recommended to assess performance across multiple random seeds. Additionally, modifications to the scripts may be necessary depending on the specific SLURM environment and configuration settings.
