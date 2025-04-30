@@ -8,7 +8,7 @@
     <a href="https://scholar.google.com.au/citations?user=Sb1Pj4sAAAAJ&hl=en">Ting Dang</a>
   </strong>
   <br/><br/>
-  <a href="">
+  <a href="https://arxiv.org/abs/2504.20343">
     <img src="https://img.shields.io/badge/Read%20Paper-IJCNN-brightgreen?style=for-the-badge" alt="Read Paper Badge">
   </a>
 </p>
