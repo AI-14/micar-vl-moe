@@ -61,7 +61,7 @@ If you find this work useful, please consider citing our paper and giving this r
 ---
 
 ### 📦 Environment Setup
-**Run:**
+1. Run:
 ```bash
 # Clone the repository
 git clone https://github.com/AI-14/micar-vl-moe.git
@@ -82,19 +82,16 @@ pip install -r requirements.txt
 
 #### COVCTR
 
-**Directory Structure:**
+1. Download from [COVCTR](https://github.com/mlii0117/COV-CTR).
+2. Create the following directory structure:
 ```
 data/
-└── covctr/
-    └── images/
-    └── reports.csv
+|-- covctr/
+    |-- images/
 ```
-
-1. Download from [COVCTR](https://github.com/mlii0117/COV-CTR).
-2. Place image files under `data/covctr/images/`.
-3. Rename `reports_ZH_EN.csv` → `reports.csv` and move the report file to `data/covctr/reports.csv`.
-
-**Run:**
+3. Place image files under `data/covctr/images/`.
+4. Rename `reports_ZH_EN.csv` → `reports.csv` and move the report file to `data/covctr/reports.csv`.
+5. Run:
 ```bash
 python preprocessors/covctr.py
 
@@ -107,16 +104,15 @@ sbatch scripts/covctr/slurm_exp.sh
 
 #### MMRETINAL
 
+1. Download from [MMRETINAL](https://github.com/lxirich/MM-Retinal).
+2. Create the following directory structure:
 **Directory Structure:**
 ```
 data/
-└── mmretinal/
+|-- mmretinal/
 ```
-
-1. Download from [MMRETINAL](https://github.com/lxirich/MM-Retinal).
-2. Place everything under `data/mmretinal/`.
-
-**Run:**
+3. Place everything under `data/mmretinal/`.
+4. Run:
 ```bash
 python preprocessors/mmretinal.py
 
@@ -129,19 +125,17 @@ sbatch scripts/mmretinal/slurm_exp.sh
 
 #### PGROSS
 
-**Directory Structure:**
+1. Download from [PGROSS](https://github.com/wang-zhanyu/medical-reports-datasets).
+2. Create the following directory structure:
 ```
 data/
-└── pgross/
-    └── images/
-    └── captions.json
+|-- pgross/
+    |-- images/
 ```
-
-1. Download from [PGROSS](https://github.com/wang-zhanyu/medical-reports-datasets).
-2. Remove `train_images.tsv`, `test_images.tsv`, `peir_gross.tsv`, `peir_gross_tags.json`.
-2. Rename `peir_gross_captions.json` → `captions.json`.
-
-**Run:**
+3. Place image files under `data/pgross/images/` and other files under `data/pgross/`. 
+4. Remove `train_images.tsv`, `test_images.tsv`, `peir_gross.tsv`, `peir_gross_tags.json`.
+5. Rename `peir_gross_captions.json` → `captions.json`.
+6. Run:
 ```bash
 python preprocessors/pgross.py
 
@@ -154,20 +148,18 @@ sbatch scripts/pgross/slurm_exp.sh
 
 #### ROCO
 
-**Directory Structure:**
+1. Download from [ROCO](https://huggingface.co/datasets/mdwiratathya/ROCO-radiology).
+2. Create the following directory structure:
 ```
 data/
-└── roco/
-    ├── parquet/
-    ├── train/images/
-    ├── validation/images/
-    └── test/images/
+|-- roco/
+    |-- parquet/
+    |-- train/images/
+    |-- validation/images/
+    |-- test/images/
 ```
-
-1. Download from [ROCO](https://huggingface.co/datasets/mdwiratathya/ROCO-radiology).
-2. Place all parquet files under `data/roco/parquet/`.
-
-**Run:**
+3. Place all parquet files under `data/roco/parquet/`.
+4. Run:
 ```bash
 python preprocessors/roco.py
 
@@ -178,8 +170,13 @@ sbatch scripts/roco/slurm_exp.sh
 
 ---
 
+### 🔍 Inference using Model Checkpoints
+1. All the required information is given in `inference.ipynb`.
+
+---
+
 ## 🧹 Clean Up
-**Run:**
+1. Run:
 ```bash
 cd ..
 conda deactivate

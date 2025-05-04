@@ -1,0 +1,9 @@
+data/
+__pycache__/
+.vscode/
+.env
+.venv 
+env/
+venv/
+experiment_runs/
+checkpoints/
